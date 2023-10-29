@@ -1,12 +1,12 @@
 import math
 import time
 
-#Miguel's thought process
-#in chicago, some parking garages have a premium option which is usually the first floor of the parking garage. Then a vip section which is also on the first floor next to an elevator for fast access. 
-#so my thought process is to add 2 child classes (Premuim_Parking and VIP_Parking. Premium will inherit from Parking Garage then VIP_Parking will inherit from Premium. 
-#Also gives me the opportunity to practice more since I struggle with parent->child->grandchild
-#I am also going to try to tell the computer, there are 50 max spaces but in premium there are only 12 spaces and vip will only have 6 spaces. 
-#sorry if I miss our code up LMAO
+# #Miguel's thought process
+# #in chicago, some parking garages have a premium option which is usually the first floor of the parking garage. Then a vip section which is also on the first floor next to an elevator for fast access. 
+# #so my thought process is to add 2 child classes (Premuim_Parking and VIP_Parking. Premium will inherit from Parking Garage then VIP_Parking will inherit from Premium. 
+# #Also gives me the opportunity to practice more since I struggle with parent->child->grandchild
+# #I am also going to try to tell the computer, there are 50 max spaces but in premium there are only 12 spaces and vip will only have 6 spaces. 
+# #sorry if I miss our code up LMAO
 
 
 class Ticket():
@@ -95,22 +95,10 @@ class Parking_Garage():
         else:
             print("invalid_ticket_number")
 
-class Premium_parking(Parking_Garage):# inherit Parent class
-    def __init__(self, max_space=50, limit=12):
-        #do I have to use the super()? yes
-        super().__init__(max_space)
-        self.limit = min(limit, max_space)
-
-        #have to do another method with an if statement and return. 
 
 
 
-premium_limited_parking = Premium_parking(max_space=50, limit=12)
-garage = Parking_Garage()
 
-garage.take_ticket()
 
-garage.pay_for_parking()
-garage.leave_garage()
 
 
